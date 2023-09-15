@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -61,7 +59,7 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
                     Text(
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nFelis consectetur nulla pharetra praesent hendrerit \nvulputate viverra. Pellentesque aliquam tempus faucibus \nest.',
                       style: TextStyle(
-                          color: Color(0xFF8E8E8E),
+                          color: const Color(0xFF8E8E8E),
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w600),
                     ),
@@ -71,7 +69,7 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
                   width: 52.w,
                   height: 74.h,
                   decoration: BoxDecoration(
-                      color: Color(0xFF27C200),
+                      color: const Color(0xFF27C200),
                       borderRadius: BorderRadius.circular(6.r)),
                 )
               ],
@@ -186,12 +184,16 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
               controller: controller,
               children: [
                 SizedBox(
+                  height: 788.h,
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 100.h,
-                        child: Text('Hello World'),
+                        height: 30.h,
                       ),
+                      Text('data'),
+                      SizedBox(
+                        height: 400,
+                      )
                     ],
                   ),
                 ),
