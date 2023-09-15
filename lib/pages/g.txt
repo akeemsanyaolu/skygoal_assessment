@@ -1,0 +1,18 @@
+ void sortByBotomSheet() {
+    showBottomSheet(
+        context: context,
+        builder: (context) {
+          return StatefulBuilder(
+              builder: (BuildContext context, StateSetter setModalState) {
+            return SizedBox(
+              height: 396.h,
+              child: Column(
+                children: [Text('SortBy')],
+              ),
+            );
+          });
+        });
+  }
+
+      d: path("M 0 20 C 0 8.9543 8.95431 0 20 0 H 334 C 345.046 0 354 8.95431 354 20 V 106.5 C 354 117.546 345.046 126.5 334 126.5 H 294.75 C 286.052 126.5 279 133.552 279 142.25 C 279 150.948 271.948 158 263.25 158 H 20 C 8.95431 158 0 149.046 0 138 V 20 Z");
+    fill: url("#paint0_linear_1_543");
