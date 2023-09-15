@@ -82,7 +82,7 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
             width: 428.w,
             height: 46.h,
             decoration: BoxDecoration(
-              color: Color(0xFFF8F8F8),
+              color: const Color(0xFFF8F8F8),
               border: Border(
                   top: BorderSide(
                       width: 1.h, color: Colors.black.withOpacity(0.1))),
@@ -93,11 +93,11 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
                 GestureDetector(
                   child: Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.only(top: 20.h),
                     width: 77,
                     height: 70,
                     color: Colors.transparent,
-                    child: Text(
+                    child: const Text(
                       'Crypto',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
@@ -192,7 +192,7 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
                       ),
                       Text('data'),
                       SizedBox(
-                        height: 400,
+                        height: 100,
                       )
                     ],
                   ),
