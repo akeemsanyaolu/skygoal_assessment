@@ -152,7 +152,7 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
                       width: 77,
                       height: 70,
                       color: Colors.transparent,
-                      child: Text(
+                      child: const Text(
                         'Q & A',
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w500),
@@ -190,9 +190,9 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
                       SizedBox(
                         height: 30.h,
                       ),
-                      Text('data'),
+                      const Text('data'),
                       SizedBox(
-                        height: 100,
+                        height: 100.h,
                       )
                     ],
                   ),
