@@ -35,6 +35,18 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: SizedBox(
+        width: 366.w,
+        height: 56.h,
+        child: FittedBox(
+          child: FloatingActionButton(
+            onPressed: () {},
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          ),
+        ),
+      ),
       body: CustomScrollView(controller: _scrollController, slivers: [
         SliverAppBar(
           title: _isSliverAppBarExpanded
@@ -53,16 +65,6 @@ class _CollegeDetailPageState extends State<CollegeDetailPage> {
               ? null
               : const FlexibleSpaceBar(
                   centerTitle: false,
-                  //collapseMode: CollapseMode.pin,
-                  // title: Text(
-                  //   'GHJK Engineering college',
-                  //   //textScaleFactor: 1,
-                  //   style: TextStyle(
-                  //     color: _textColor,
-                  //     fontWeight: FontWeight.w700,
-                  //     fontSize: 15,
-                  //   ),
-                  // ),
                   background: BuildHeaderBody(),
                 ),
         ),
@@ -153,7 +155,7 @@ class _BuildDetailBodyState extends State<BuildDetailBody> {
                       child: Text(
                         'Hostel facillity',
                         style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.w600),
+                            fontSize: 12.sp, fontWeight: FontWeight.w600),
                       )),
                   onTap: () {
                     controller.animateToPage(1,
@@ -168,10 +170,13 @@ class _BuildDetailBodyState extends State<BuildDetailBody> {
                       width: 77,
                       height: 70,
                       color: Colors.transparent,
-                      child: Text(
-                        'Q & A',
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.w600),
+                      child: SizedBox(
+                        width: 77.w,
+                        child: Text(
+                          'Q & A',
+                          style: TextStyle(
+                              fontSize: 12.sp, fontWeight: FontWeight.w600),
+                        ),
                       )),
                   onTap: () {
                     controller.animateToPage(2,
@@ -216,18 +221,87 @@ class _BuildDetailBodyState extends State<BuildDetailBody> {
             ),
           ),
           SizedBox(
-            height: 789.h,
+            height: 785.h,
             child: PageView(
               controller: controller,
               children: [
                 SizedBox(
-                  height: 789.h.h,
+                  height: 785.h,
                   child: Column(
                     children: [
-                      SizedBox(
-                        height: 30.h,
-                      ),
-                      const Text('data'),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 31.w),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Description',
+                              style: TextStyle(
+                                  fontSize: 16.sp, fontWeight: FontWeight.w700),
+                            ),
+                            Text(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque accumsan, scelerisque eget lectus ullamcorper a placerat. Porta cras at pretium varius purus cursus. Morbi justo commodo habitant morbi quis pharetra posuere mauris. Morbi sit risus, diam amet volutpat quis. Nisl pellentesque nec facilisis ultrices.'),
+                            Text(
+                              'Location',
+                              style: TextStyle(
+                                  fontSize: 16.sp, fontWeight: FontWeight.w700),
+                            ),
+                            SizedBox(
+                              height: 28.h,
+                            ),
+                            Image(image: AssetImage('assets/img_location.png')),
+                            SizedBox(
+                              height: 33.h,
+                            ),
+                            Text(
+                              'Student Review',
+                              style: TextStyle(
+                                  fontSize: 16.sp, fontWeight: FontWeight.w700),
+                            ),
+                            Row(
+                              children: [],
+                            ),
+                            Container(
+                              width: 368.w,
+                              height: 120.h,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10.r),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.03),
+                                        blurRadius: 10,
+                                        offset: Offset(8, 8)),
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.03),
+                                        blurRadius: 10,
+                                        offset: Offset(-8, -8))
+                                  ]),
+                            ),
+                            SizedBox(
+                              height: 17.h,
+                            ),
+                            GestureDetector(
+                              child: Container(
+                                width: 366.w,
+                                height: 56.h,
+                                decoration: BoxDecoration(
+                                    color: const Color(0xFF0E3C6E),
+                                    borderRadius: BorderRadius.circular(10.r)),
+                                child: Center(
+                                  child: Text(
+                                    'Apply Now',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20.sp,
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
